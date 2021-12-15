@@ -129,14 +129,19 @@ public class LotteryView extends View {
         return bm;
     }
 
-    public void resetPathBitmap() {
+    private void resetPathBitmap() {
         mBitmapSrc = makeSrc();
         invalidate();
     }
 
-    public void resetBitmap() {
+    private void resetBitmap() {
         mBitmapSrc = makeSrc();
         mBitmapDst = makeDst();
         invalidate();
+    }
+
+    public void reset(){
+        mTouchPath.reset();
+        resetPathBitmap();
     }
 }
